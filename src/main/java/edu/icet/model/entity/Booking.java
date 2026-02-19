@@ -16,12 +16,12 @@ public class Booking {
     @Id
     @GeneratedValue
     private Long id;
-    private Date scheduleDate;
+    private Date sheduleDate;
 
     @OneToOne(cascade = CascadeType.ALL)
-    private Candidate candidate;
+    Candidate candidate;
 
     @OneToOne
-    private Slot slot;
+    Slot slot;
 
 }

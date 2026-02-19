@@ -1,9 +1,6 @@
 package edu.icet.model.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
@@ -19,8 +16,9 @@ public class Slot {
     private String timeSlot;
     private boolean isAvailable;
 
-    @ManyToMany
+    @ManyToOne
     private Interviewer interviewer;
+
 
 
 }
